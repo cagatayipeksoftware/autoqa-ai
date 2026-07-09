@@ -1,0 +1,30 @@
+{
+  "name": "qa-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:headed": "cucumber-js",
+    "test:accessibility": "cucumber-js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/chai": "^5.2.3",
+    "@types/node": "^26.1.1",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@cucumber/cucumber": "^13.0.0",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.4.2",
+    "multiple-cucumber-html-reporter": "^4.1.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.0"
+  }
+}
