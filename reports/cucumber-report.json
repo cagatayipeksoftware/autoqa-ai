@@ -4,56 +4,56 @@
     "elements": [
       {
         "description": "",
-        "id": "accessibility-scan;homepage-accessibility-scan",
-        "keyword": "Scenario",
-        "line": 6,
-        "name": "Homepage accessibility scan",
+        "id": "accessibility-scan;accessibility-scan",
+        "keyword": "Scenario Outline",
+        "line": 15,
+        "name": "Accessibility scan",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 772883125
+              "duration": 787035167
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
-            "name": "user opens homepage",
+            "line": 5,
+            "name": "user opens \"home\"",
             "match": {
-              "location": "step-definitions/common.steps.ts:4"
+              "location": "step-definitions/common.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 1103472667
+              "duration": 890506958
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 8,
+            "line": 7,
             "name": "accessibility scan is executed",
             "match": {
               "location": "step-definitions/accessibility.steps.ts:5"
             },
             "result": {
               "status": "passed",
-              "duration": 306348250
+              "duration": 274929542
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 10,
+            "line": 9,
             "name": "no critical accessibility violations should exist",
             "match": {
               "location": "step-definitions/accessibility.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 1698708
+              "duration": 1838792
             },
             "embeddings": [
               {
@@ -65,14 +65,14 @@
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 12,
+            "line": 11,
             "name": "serious accessibility violations should be reported",
             "match": {
               "location": "step-definitions/accessibility.steps.ts:61"
             },
             "result": {
               "status": "passed",
-              "duration": 229374
+              "duration": 271582
             }
           },
           {
@@ -80,7 +80,262 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 43529790
+              "duration": 40505540
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "accessibility-scan;accessibility-scan",
+        "keyword": "Scenario Outline",
+        "line": 16,
+        "name": "Accessibility scan",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 357283625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user opens \"product\"",
+            "match": {
+              "location": "step-definitions/common.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1888107500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "accessibility scan is executed",
+            "match": {
+              "location": "step-definitions/accessibility.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 196475958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "no critical accessibility violations should exist",
+            "match": {
+              "location": "step-definitions/accessibility.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 462999
+            },
+            "embeddings": [
+              {
+                "data": "CkFjY2Vzc2liaWxpdHkgU3VtbWFyeQoKQ3JpdGljYWwgOiAxClNlcmlvdXMgOiAxCk1vZGVyYXRlIDogMgpNaW5vciA6IDAK",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "serious accessibility violations should be reported",
+            "match": {
+              "location": "step-definitions/accessibility.steps.ts:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 249583
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 41279582
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "accessibility-scan;accessibility-scan",
+        "keyword": "Scenario Outline",
+        "line": 17,
+        "name": "Accessibility scan",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 345572333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user opens \"cart\"",
+            "match": {
+              "location": "step-definitions/common.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1114807125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "accessibility scan is executed",
+            "match": {
+              "location": "step-definitions/accessibility.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 216112625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "no critical accessibility violations should exist",
+            "match": {
+              "location": "step-definitions/accessibility.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 400333
+            },
+            "embeddings": [
+              {
+                "data": "CkFjY2Vzc2liaWxpdHkgU3VtbWFyeQoKQ3JpdGljYWwgOiAxClNlcmlvdXMgOiAxCk1vZGVyYXRlIDogMwpNaW5vciA6IDEK",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "serious accessibility violations should be reported",
+            "match": {
+              "location": "step-definitions/accessibility.steps.ts:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 202000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 37973250
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "accessibility-scan;accessibility-scan",
+        "keyword": "Scenario Outline",
+        "line": 18,
+        "name": "Accessibility scan",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 343442667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user opens \"login\"",
+            "match": {
+              "location": "step-definitions/common.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 772616500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "accessibility scan is executed",
+            "match": {
+              "location": "step-definitions/accessibility.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 237059333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "no critical accessibility violations should exist",
+            "match": {
+              "location": "step-definitions/accessibility.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 401332
+            },
+            "embeddings": [
+              {
+                "data": "CkFjY2Vzc2liaWxpdHkgU3VtbWFyeQoKQ3JpdGljYWwgOiAxClNlcmlvdXMgOiAwCk1vZGVyYXRlIDogMQpNaW5vciA6IDAK",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "serious accessibility violations should be reported",
+            "match": {
+              "location": "step-definitions/accessibility.steps.ts:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 224458
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 33634791
             }
           }
         ],
@@ -110,7 +365,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 355394582
+              "duration": 341716459
             }
           },
           {
@@ -123,7 +378,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1482173083
+              "duration": 754466542
             }
           },
           {
@@ -136,7 +391,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3925000
+              "duration": 1974124
             }
           },
           {
@@ -144,7 +399,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 54204167
+              "duration": 43546875
             }
           }
         ],
@@ -174,7 +429,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 359789667
+              "duration": 355914042
             }
           },
           {
@@ -183,11 +438,11 @@
             "line": 4,
             "name": "user opens homepage",
             "match": {
-              "location": "step-definitions/common.steps.ts:4"
+              "location": "step-definitions/common.steps.ts:5"
             },
             "result": {
               "status": "passed",
-              "duration": 700165750
+              "duration": 826969417
             }
           },
           {
@@ -200,7 +455,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1054843916
+              "duration": 1074814500
             }
           },
           {
@@ -213,7 +468,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 805877208
+              "duration": 834962499
             }
           },
           {
@@ -221,7 +476,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 68492249
+              "duration": 74488375
             }
           }
         ],
@@ -251,7 +506,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 366325666
+              "duration": 347367916
             }
           },
           {
@@ -260,11 +515,11 @@
             "line": 4,
             "name": "user opens homepage",
             "match": {
-              "location": "step-definitions/common.steps.ts:4"
+              "location": "step-definitions/common.steps.ts:5"
             },
             "result": {
               "status": "passed",
-              "duration": 786119249
+              "duration": 892030500
             }
           },
           {
@@ -277,7 +532,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 911149750
+              "duration": 1051483207
             }
           },
           {
@@ -290,7 +545,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 845701333
+              "duration": 890005624
             }
           },
           {
@@ -303,7 +558,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 245135624
+              "duration": 234961833
             }
           },
           {
@@ -316,7 +571,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1318314124
+              "duration": 1326642917
             }
           },
           {
@@ -324,7 +579,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 60222874
+              "duration": 72391791
             }
           }
         ],

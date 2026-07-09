@@ -1,11 +1,11 @@
 import { When, Then } from "@cucumber/cucumber";
 import { expect } from "@playwright/test";
-import { AccessibilityPage } from "../pages/AccessibilityPage";
+import { AccessibilityService } from "../services/AccessibilityService";
 
 When("accessibility scan is executed", async function () {
-    const accessibilityPage = new AccessibilityPage(this.page);
+    const service = new AccessibilityService(this.page);
 
-    this.accessibilityResults = await accessibilityPage.scan();
+    this.accessibilityResults = await service.scan();
 });
 
 Then("no critical accessibility violations should exist", async function () {

@@ -43,16 +43,16 @@ export class HomePage extends BasePage {
 }
 
     async openCart() {
-        await this.cartLink.click();
-    }
+    await this.click(this.cartLink);
+}
 
     async openLogin() {
-        await this.loginLink.click();
-    }
+    await this.click(this.loginLink);
+}
 
     async openSignUp() {
-        await this.signUpLink.click();
-    }
+    await this.click(this.signUpLink);
+}
 
     // =========================
     // Assertions
