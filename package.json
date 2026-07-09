@@ -6,7 +6,8 @@
   "scripts": {
     "test": "cucumber-js --config config/cucumber.js",
     "test:headed": "cucumber-js --config config/cucumber.js",
-    "test:accessibility": "cucumber-js --config config/cucumber.js"
+    "test:accessibility": "cucumber-js --config config/cucumber.js",
+    "ai:discover": "tsx ai/runDiscovery.ts"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
   "dependencies": {
     "@axe-core/playwright": "^4.12.1",
     "@cucumber/cucumber": "^13.0.0",
+    "@google/genai": "^2.10.0",
     "axe-core": "^4.12.1",
     "cross-env": "^10.1.0",
     "dotenv": "^17.4.2",

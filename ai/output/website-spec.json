@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "Home",
+    "Cart",
+    "Contact",
+    "About Us",
+    "Log In",
+    "Sign Up"
+  ],
+  "navigation": [
+    "Home",
+    "Contact",
+    "About us",
+    "Cart",
+    "Log in",
+    "Log out",
+    "Sign up",
+    "Category: Phones",
+    "Category: Laptops",
+    "Category: Monitors"
+  ],
+  "forms": [
+    "Contact Form",
+    "Sign Up Form",
+    "Log In Form"
+  ],
+  "userFlows": [
+    "Browse products on Home page",
+    "Filter products by category",
+    "Navigate product pages via pagination",
+    "Send a contact message",
+    "Watch About Us video",
+    "Register a new user account",
+    "Log in to an existing account",
+    "Log out from an account",
+    "View Cart"
+  ],
+  "testIdeas": [
+    "Verify Home page loads with product listings",
+    "Verify 'Contact' modal opens and form submission behavior",
+    "Verify 'About us' modal opens and video playback",
+    "Verify 'Sign up' modal opens and user registration (success/failure)",
+    "Verify 'Log in' modal opens and user login (success/failure)",
+    "Verify 'Log out' functionality",
+    "Verify navigation to 'Cart' page",
+    "Verify product filtering by 'Phones' category",
+    "Verify product filtering by 'Laptops' category",
+    "Verify product filtering by 'Monitors' category",
+    "Verify 'Next' and 'Previous' pagination buttons function correctly",
+    "Verify navbar links are clickable and lead to expected actions/pages",
+    "Verify carousel images display correctly and navigation works"
+  ],
+  "risks": [
+    "Modal accessibility (keyboard navigation, focus management, screen reader announcements)",
+    "Form accessibility (input labels, error message announcements for screen readers)",
+    "Dynamic content updates (product list, user name) for screen reader users",
+    "Color contrast issues in navigation or footer for text readability",
+    "Video accessibility (lack of captions/transcripts for 'About us' video)",
+    "Redundant links (e.g., 'Home' in brand and nav list, though common)",
+    "JavaScript reliance for core navigation (e.g., categories, login/logout actions)"
+  ]
+}
