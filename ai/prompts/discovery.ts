@@ -3,7 +3,7 @@ You are a Senior QA Automation Engineer.
 
 Analyze the provided HTML of a web application.
 
-Your task is to identify the application's structure and generate a website specification.
+Your task is to identify the application's structure and generate a complete website specification.
 
 Return ONLY valid JSON.
 
@@ -14,7 +14,16 @@ The JSON must exactly match the following schema:
   "navigation": [],
   "forms": [],
   "userFlows": [],
-  "testIdeas": [],
+  "testIdeas": [
+    {
+      "id": "",
+      "title": "",
+      "page": "",
+      "priority": "",
+      "type": "",
+      "reason": ""
+    }
+  ],
   "risks": []
 }
 
@@ -27,7 +36,37 @@ Rules:
 - Suggest useful Playwright end-to-end test ideas.
 - Suggest accessibility and usability risks.
 - Do not invent pages or flows that do not exist.
-- Keep all array values short and descriptive.
+- Keep all values short and descriptive.
+
+For every discovered user flow create at least one test idea.
+
+Priority rules:
+
+- Authentication -> High
+- Shopping Cart -> High
+- Checkout -> High
+- Product Navigation -> Medium
+- Product Details -> Medium
+- Informational Pages -> Low
+
+Test type rules:
+
+- Login/Register -> Smoke
+- Shopping Cart -> Regression
+- Accessibility findings -> Accessibility
+- Validation scenarios -> Negative
+- Successful business flows -> Positive
+
+The "testIdeas" array MUST contain objects using this schema:
+
+{
+  "id": "LOGIN-001",
+  "title": "Verify successful login",
+  "page": "Login",
+  "priority": "High",
+  "type": "Smoke",
+  "reason": "Authentication is a critical business flow"
+}
 
 IMPORTANT:
 
@@ -63,9 +102,22 @@ Example:
     "Login"
   ],
   "testIdeas": [
-    "Verify successful login",
-    "Verify adding a product to cart",
-    "Verify empty cart behavior"
+    {
+      "id": "LOGIN-001",
+      "title": "Verify successful login",
+      "page": "Login",
+      "priority": "High",
+      "type": "Smoke",
+      "reason": "Authentication is a critical business flow"
+    },
+    {
+      "id": "CART-001",
+      "title": "Verify adding a product to cart",
+      "page": "Cart",
+      "priority": "High",
+      "type": "Regression",
+      "reason": "Shopping cart is a core business flow"
+    }
   ],
   "risks": [
     "Images without alt text",

@@ -1,19 +1,18 @@
-import { Page } from "@playwright/test";
 import { GeminiService } from "../GeminiService";
+import { WebsiteSnapshot } from "../models/WebsiteSnapshot";
 import { WebsiteSpec } from "../models/WebsiteSpec";
 
 export class DiscoveryAgent {
 
     constructor(
-        private page: Page,
-        private gemini: GeminiService
+        private readonly gemini: GeminiService
     ) {}
 
-    async discover(): Promise<WebsiteSpec> {
+    async discover(
+        snapshot: WebsiteSnapshot
+    ): Promise<WebsiteSpec> {
 
-        const html = await this.page.content();
-
-        return await this.gemini.discoverWebsite(html);
+        return await this.gemini.discoverWebsite(snapshot);
 
     }
 

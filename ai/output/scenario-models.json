@@ -1,0 +1,110 @@
+[
+  {
+    "id": "PRODCAT-001",
+    "feature": "Home",
+    "title": "Verify products filter by category",
+    "page": "Home",
+    "priority": "Medium",
+    "tags": [
+      "@medium",
+      "@positive"
+    ],
+    "steps": []
+  },
+  {
+    "id": "PRODPAG-001",
+    "feature": "Home",
+    "title": "Verify pagination navigates through products",
+    "page": "Home",
+    "priority": "Medium",
+    "tags": [
+      "@medium",
+      "@positive"
+    ],
+    "steps": []
+  },
+  {
+    "id": "PRODDET-001",
+    "feature": "Product Details",
+    "title": "Verify product details page displays correctly",
+    "page": "Product Details",
+    "priority": "Medium",
+    "tags": [
+      "@medium",
+      "@positive"
+    ],
+    "steps": []
+  },
+  {
+    "id": "CART-001",
+    "feature": "Product Details",
+    "title": "Verify adding a product to cart successfully",
+    "page": "Product Details",
+    "priority": "High",
+    "tags": [
+      "@high",
+      "@regression"
+    ],
+    "steps": []
+  },
+  {
+    "id": "REG-001",
+    "feature": "Sign up",
+    "title": "Verify successful user registration",
+    "page": "Sign up",
+    "priority": "High",
+    "tags": [
+      "@high",
+      "@smoke"
+    ],
+    "steps": []
+  },
+  {
+    "id": "LOGIN-001",
+    "feature": "Login",
+    "title": "Verify successful user login",
+    "page": "Login",
+    "priority": "High",
+    "tags": [
+      "@high",
+      "@smoke"
+    ],
+    "steps": []
+  },
+  {
+    "id": "LOGOUT-001",
+    "feature": "Home",
+    "title": "Verify successful user logout",
+    "page": "Home",
+    "priority": "High",
+    "tags": [
+      "@high",
+      "@positive"
+    ],
+    "steps": []
+  },
+  {
+    "id": "CONTACT-001",
+    "feature": "Contact",
+    "title": "Verify contact message can be sent",
+    "page": "Contact",
+    "priority": "Low",
+    "tags": [
+      "@low",
+      "@positive"
+    ],
+    "steps": []
+  },
+  {
+    "id": "ABOUTUS-001",
+    "feature": "About us",
+    "title": "Verify About us video modal opens and video plays",
+    "page": "About us",
+    "priority": "Low",
+    "tags": [
+      "@low",
+      "@positive"
+    ],
+    "steps": []
+  }
+]

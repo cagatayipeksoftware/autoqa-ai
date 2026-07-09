@@ -2,10 +2,7 @@
   "pages": [
     "Home",
     "Cart",
-    "Contact",
-    "About Us",
-    "Log In",
-    "Sign Up"
+    "Product Details"
   ],
   "navigation": [
     "Home",
@@ -15,9 +12,11 @@
     "Log in",
     "Log out",
     "Sign up",
-    "Category: Phones",
-    "Category: Laptops",
-    "Category: Monitors"
+    "Phones (Category)",
+    "Laptops (Category)",
+    "Monitors (Category)",
+    "Previous (Pagination)",
+    "Next (Pagination)"
   ],
   "forms": [
     "Contact Form",
@@ -25,38 +24,97 @@
     "Log In Form"
   ],
   "userFlows": [
-    "Browse products on Home page",
-    "Filter products by category",
-    "Navigate product pages via pagination",
-    "Send a contact message",
-    "Watch About Us video",
-    "Register a new user account",
-    "Log in to an existing account",
-    "Log out from an account",
-    "View Cart"
+    "Browse Products by Category",
+    "Navigate Product Pages",
+    "View Product Details",
+    "Add Product to Cart",
+    "Register New User",
+    "Log In",
+    "Log Out",
+    "Send Contact Message",
+    "View About Us Video"
   ],
   "testIdeas": [
-    "Verify Home page loads with product listings",
-    "Verify 'Contact' modal opens and form submission behavior",
-    "Verify 'About us' modal opens and video playback",
-    "Verify 'Sign up' modal opens and user registration (success/failure)",
-    "Verify 'Log in' modal opens and user login (success/failure)",
-    "Verify 'Log out' functionality",
-    "Verify navigation to 'Cart' page",
-    "Verify product filtering by 'Phones' category",
-    "Verify product filtering by 'Laptops' category",
-    "Verify product filtering by 'Monitors' category",
-    "Verify 'Next' and 'Previous' pagination buttons function correctly",
-    "Verify navbar links are clickable and lead to expected actions/pages",
-    "Verify carousel images display correctly and navigation works"
+    {
+      "id": "PRODCAT-001",
+      "title": "Verify products filter by category",
+      "page": "Home",
+      "priority": "Medium",
+      "type": "Positive",
+      "reason": "Essential for product discovery"
+    },
+    {
+      "id": "PRODPAG-001",
+      "title": "Verify pagination navigates through products",
+      "page": "Home",
+      "priority": "Medium",
+      "type": "Positive",
+      "reason": "Ensures all products are accessible"
+    },
+    {
+      "id": "PRODDET-001",
+      "title": "Verify product details page displays correctly",
+      "page": "Product Details",
+      "priority": "Medium",
+      "type": "Positive",
+      "reason": "Users need full product information"
+    },
+    {
+      "id": "CART-001",
+      "title": "Verify adding a product to cart successfully",
+      "page": "Product Details",
+      "priority": "High",
+      "type": "Regression",
+      "reason": "Shopping cart is a core business flow"
+    },
+    {
+      "id": "REG-001",
+      "title": "Verify successful user registration",
+      "page": "Sign up",
+      "priority": "High",
+      "type": "Smoke",
+      "reason": "Critical for new user onboarding"
+    },
+    {
+      "id": "LOGIN-001",
+      "title": "Verify successful user login",
+      "page": "Login",
+      "priority": "High",
+      "type": "Smoke",
+      "reason": "Authentication is a critical business flow"
+    },
+    {
+      "id": "LOGOUT-001",
+      "title": "Verify successful user logout",
+      "page": "Home",
+      "priority": "High",
+      "type": "Positive",
+      "reason": "Essential for security and session management"
+    },
+    {
+      "id": "CONTACT-001",
+      "title": "Verify contact message can be sent",
+      "page": "Contact",
+      "priority": "Low",
+      "type": "Positive",
+      "reason": "Ensures customer support channel functionality"
+    },
+    {
+      "id": "ABOUTUS-001",
+      "title": "Verify About us video modal opens and video plays",
+      "page": "About us",
+      "priority": "Low",
+      "type": "Positive",
+      "reason": "Ensures informational content is accessible"
+    }
   ],
   "risks": [
-    "Modal accessibility (keyboard navigation, focus management, screen reader announcements)",
-    "Form accessibility (input labels, error message announcements for screen readers)",
-    "Dynamic content updates (product list, user name) for screen reader users",
-    "Color contrast issues in navigation or footer for text readability",
-    "Video accessibility (lack of captions/transcripts for 'About us' video)",
-    "Redundant links (e.g., 'Home' in brand and nav list, though common)",
-    "JavaScript reliance for core navigation (e.g., categories, login/logout actions)"
+    "Duplicate 'id' attributes (e.g., 'itemc') for category links, which is invalid HTML and can cause accessibility and scripting issues.",
+    "Video element in 'About us' modal lacks closed captions, subtitles, or transcripts, impacting accessibility for users with hearing impairments.",
+    "Potential low color contrast for text elements on gradient backgrounds (e.g., navigation links on hover, footer text), failing WCAG guidelines.",
+    "Error messages in forms (e.g., 'errors', 'errorl') may not be dynamically announced to screen readers without proper ARIA live regions.",
+    "The navigation bar has an unusually fixed height (350px), consuming excessive screen real estate and potentially hindering usability on smaller viewports.",
+    "Carousel's absolute positioning and fixed width might lead to responsiveness issues or layout overlaps on various screen sizes, despite the media query to hide it.",
+    "Lack of explicit visual feedback or success messages after form submissions (e.g., 'Send message', 'Sign up', 'Log in' buttons) for the user."
   ]
 }
