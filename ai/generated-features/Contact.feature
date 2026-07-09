@@ -3,15 +3,15 @@
 # Do not edit manually.
 # ==========================================
 
-@cart
-Feature: Cart
+@contact
+Feature: Contact
 
 Background:
   Given user opens homepage
 
-@high
-@regression
-Scenario: Verify navigating to the Cart page
-  When user adds a product to the cart
-  Then cart should contain the product
+@low
+@positive
+Scenario: Verify sending a contact message with valid data
+  When user performs the action
+  Then expected result should be displayed
 

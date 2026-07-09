@@ -1,42 +1,6 @@
 [
   {
-    "id": "HOME-001",
-    "feature": "Home",
-    "title": "Verify product categories filter products correctly",
-    "page": "Home",
-    "priority": "Medium",
-    "tags": [
-      "@medium",
-      "@positive"
-    ],
-    "steps": []
-  },
-  {
-    "id": "HOME-002",
-    "feature": "Home",
-    "title": "Verify product pagination navigates correctly",
-    "page": "Home",
-    "priority": "Medium",
-    "tags": [
-      "@medium",
-      "@positive"
-    ],
-    "steps": []
-  },
-  {
-    "id": "PROD-001",
-    "feature": "Product Details",
-    "title": "Verify product details page loads with correct information",
-    "page": "Product Details",
-    "priority": "Medium",
-    "tags": [
-      "@medium",
-      "@positive"
-    ],
-    "steps": []
-  },
-  {
-    "id": "SIGNUP-001",
+    "id": "REG-001",
     "feature": "Sign Up",
     "title": "Verify successful user registration",
     "page": "Sign Up",
@@ -48,9 +12,21 @@
     "steps": []
   },
   {
-    "id": "SIGNUP-002",
+    "id": "REG-002",
     "feature": "Sign Up",
-    "title": "Verify registration with existing username fails",
+    "title": "Verify registration with existing username",
+    "page": "Sign Up",
+    "priority": "High",
+    "tags": [
+      "@high",
+      "@negative"
+    ],
+    "steps": []
+  },
+  {
+    "id": "REG-003",
+    "feature": "Sign Up",
+    "title": "Verify registration with empty fields",
     "page": "Sign Up",
     "priority": "High",
     "tags": [
@@ -61,9 +37,9 @@
   },
   {
     "id": "LOGIN-001",
-    "feature": "Login",
+    "feature": "Log In",
     "title": "Verify successful user login",
-    "page": "Login",
+    "page": "Log In",
     "priority": "High",
     "tags": [
       "@high",
@@ -73,9 +49,21 @@
   },
   {
     "id": "LOGIN-002",
-    "feature": "Login",
-    "title": "Verify login with invalid credentials fails",
-    "page": "Login",
+    "feature": "Log In",
+    "title": "Verify login with invalid credentials",
+    "page": "Log In",
+    "priority": "High",
+    "tags": [
+      "@high",
+      "@negative"
+    ],
+    "steps": []
+  },
+  {
+    "id": "LOGIN-003",
+    "feature": "Log In",
+    "title": "Verify login with empty fields",
+    "page": "Log In",
     "priority": "High",
     "tags": [
       "@high",
@@ -88,53 +76,101 @@
     "feature": "Home",
     "title": "Verify successful user logout",
     "page": "Home",
-    "priority": "High",
+    "priority": "Low",
     "tags": [
-      "@high",
+      "@low",
       "@smoke"
     ],
     "steps": []
   },
   {
-    "id": "CONTACT-001",
-    "feature": "Home (Contact)",
-    "title": "Verify sending a contact message successfully",
-    "page": "Home (Contact Modal)",
-    "priority": "Low",
+    "id": "BROWSECAT-001",
+    "feature": "Home",
+    "title": "Verify filtering products by 'Phones' category",
+    "page": "Home",
+    "priority": "Medium",
     "tags": [
-      "@low",
+      "@medium",
       "@positive"
     ],
     "steps": []
   },
   {
-    "id": "CONTACT-002",
-    "feature": "Home (Contact)",
-    "title": "Verify contact form displays validation errors for empty fields",
-    "page": "Home (Contact Modal)",
-    "priority": "Low",
+    "id": "BROWSECAT-002",
+    "feature": "Home",
+    "title": "Verify filtering products by 'Laptops' category",
+    "page": "Home",
+    "priority": "Medium",
     "tags": [
-      "@low",
-      "@negative"
+      "@medium",
+      "@positive"
     ],
     "steps": []
   },
   {
-    "id": "ABOUTUS-001",
-    "feature": "Home (About Us Video)",
-    "title": "Verify 'About us' video modal opens and video plays",
-    "page": "Home (About Us Video Modal)",
-    "priority": "Low",
+    "id": "PAGIN-001",
+    "feature": "Home",
+    "title": "Verify navigating to the next page of products",
+    "page": "Home",
+    "priority": "Medium",
     "tags": [
-      "@low",
+      "@medium",
+      "@positive"
+    ],
+    "steps": []
+  },
+  {
+    "id": "PRODDETAIL-001",
+    "feature": "Product",
+    "title": "Verify navigating to a product details page",
+    "page": "Product",
+    "priority": "Medium",
+    "tags": [
+      "@medium",
       "@positive"
     ],
     "steps": []
   },
   {
     "id": "CART-001",
+    "feature": "Product",
+    "title": "Verify adding a product from product details page to cart",
+    "page": "Product",
+    "priority": "High",
+    "tags": [
+      "@high",
+      "@regression"
+    ],
+    "steps": []
+  },
+  {
+    "id": "CONTACT-001",
+    "feature": "Contact",
+    "title": "Verify sending a contact message with valid data",
+    "page": "Contact",
+    "priority": "Low",
+    "tags": [
+      "@low",
+      "@positive"
+    ],
+    "steps": []
+  },
+  {
+    "id": "VIDEO-001",
+    "feature": "About us",
+    "title": "Verify 'About us' video plays successfully",
+    "page": "About us",
+    "priority": "Low",
+    "tags": [
+      "@low",
+      "@positive"
+    ],
+    "steps": []
+  },
+  {
+    "id": "NAV-001",
     "feature": "Cart",
-    "title": "Verify navigation to the Cart page",
+    "title": "Verify navigating to the Cart page",
     "page": "Cart",
     "priority": "High",
     "tags": [

@@ -9,21 +9,27 @@ Feature: Home
 Background:
   Given user opens homepage
 
-@medium
-@positive
-Scenario: Verify product categories filter products correctly
-  When user opens a product
-  Then product details should be displayed
-
-@medium
-@positive
-Scenario: Verify product pagination navigates correctly
-  When user opens a product
-  Then product details should be displayed
-
-@high
+@low
 @smoke
 Scenario: Verify successful user logout
   When user performs the action
   Then expected result should be displayed
+
+@medium
+@positive
+Scenario: Verify filtering products by 'Phones' category
+  When user opens a product
+  Then product details should be displayed
+
+@medium
+@positive
+Scenario: Verify filtering products by 'Laptops' category
+  When user opens a product
+  Then product details should be displayed
+
+@medium
+@positive
+Scenario: Verify navigating to the next page of products
+  When user opens a product
+  Then product details should be displayed
 

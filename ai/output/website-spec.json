@@ -1,213 +1,171 @@
 {
   "pages": [
     "Home",
-    "Product Details",
+    "Product",
     "Cart"
   ],
   "navigation": [
-    {
-      "name": "PRODUCT STORE",
-      "destination": "Home"
-    },
-    {
-      "name": "Home",
-      "destination": "Home"
-    },
-    {
-      "name": "Contact",
-      "destination": "Contact Modal"
-    },
-    {
-      "name": "About us",
-      "destination": "About Us Video Modal"
-    },
-    {
-      "name": "Cart",
-      "destination": "Cart"
-    },
-    {
-      "name": "Log in",
-      "destination": "Log In Modal"
-    },
-    {
-      "name": "Log out",
-      "destination": "Home (User Logout)"
-    },
-    {
-      "name": "Sign up",
-      "destination": "Sign Up Modal"
-    },
-    {
-      "name": "Phones",
-      "destination": "Home (Category Filter)"
-    },
-    {
-      "name": "Laptops",
-      "destination": "Home (Category Filter)"
-    },
-    {
-      "name": "Monitors",
-      "destination": "Home (Category Filter)"
-    },
-    {
-      "name": "Product Link",
-      "destination": "Product Details"
-    },
-    {
-      "name": "Pagination Previous",
-      "destination": "Home (Product List)"
-    },
-    {
-      "name": "Pagination Next",
-      "destination": "Home (Product List)"
-    }
+    "Home",
+    "Contact",
+    "About us",
+    "Cart",
+    "Log in",
+    "Log out",
+    "Sign up",
+    "Phones (Category)",
+    "Laptops (Category)",
+    "Monitors (Category)",
+    "Product Item (Detail Page)",
+    "Previous (Pagination)",
+    "Next (Pagination)"
   ],
   "forms": [
-    {
-      "name": "Contact Form",
-      "fields": [
-        "Contact Email",
-        "Contact Name",
-        "Message"
-      ],
-      "destination": "Home (Contact Modal)"
-    },
-    {
-      "name": "Sign Up Form",
-      "fields": [
-        "Username",
-        "Password"
-      ],
-      "destination": "Home (Sign Up Modal)"
-    },
-    {
-      "name": "Log In Form",
-      "fields": [
-        "Username",
-        "Password"
-      ],
-      "destination": "Home (Log In Modal)"
-    },
-    {
-      "name": "Product Pagination",
-      "fields": [],
-      "destination": "Home (Product List)"
-    }
+    "Contact",
+    "Sign Up",
+    "Log In"
   ],
   "userFlows": [
-    "Browse Products & Categories",
-    "View Product Details",
     "User Registration",
-    "User Authentication (Login/Logout)",
+    "User Login",
+    "User Logout",
+    "Browse Products by Category",
+    "Browse Products with Pagination",
+    "View Product Details",
+    "Add Product to Cart",
     "Contact Support",
-    "View About Us Information",
-    "Access Cart"
+    "Watch About Us Video",
+    "Navigate to Cart"
   ],
   "testIdeas": [
     {
-      "id": "HOME-001",
-      "title": "Verify product categories filter products correctly",
-      "page": "Home",
-      "priority": "Medium",
-      "type": "Positive",
-      "reason": "Core functionality to explore products effectively."
-    },
-    {
-      "id": "HOME-002",
-      "title": "Verify product pagination navigates correctly",
-      "page": "Home",
-      "priority": "Medium",
-      "type": "Positive",
-      "reason": "Essential for viewing all products listed on the home page."
-    },
-    {
-      "id": "PROD-001",
-      "title": "Verify product details page loads with correct information",
-      "page": "Product Details",
-      "priority": "Medium",
-      "type": "Positive",
-      "reason": "Fundamental user journey to inspect products before purchase."
-    },
-    {
-      "id": "SIGNUP-001",
+      "id": "REG-001",
       "title": "Verify successful user registration",
       "page": "Sign Up",
       "priority": "High",
       "type": "Smoke",
-      "reason": "Authentication is a critical business flow."
+      "reason": "Authentication is a critical business flow"
     },
     {
-      "id": "SIGNUP-002",
-      "title": "Verify registration with existing username fails",
+      "id": "REG-002",
+      "title": "Verify registration with existing username",
       "page": "Sign Up",
       "priority": "High",
       "type": "Negative",
-      "reason": "Prevent creation of duplicate user accounts."
+      "reason": "Prevent duplicate accounts and ensure data integrity"
+    },
+    {
+      "id": "REG-003",
+      "title": "Verify registration with empty fields",
+      "page": "Sign Up",
+      "priority": "High",
+      "type": "Negative",
+      "reason": "Ensure input validation works correctly"
     },
     {
       "id": "LOGIN-001",
       "title": "Verify successful user login",
-      "page": "Login",
+      "page": "Log In",
       "priority": "High",
       "type": "Smoke",
-      "reason": "Authentication is a critical business flow."
+      "reason": "Authentication is a critical business flow"
     },
     {
       "id": "LOGIN-002",
-      "title": "Verify login with invalid credentials fails",
-      "page": "Login",
+      "title": "Verify login with invalid credentials",
+      "page": "Log In",
       "priority": "High",
       "type": "Negative",
-      "reason": "Ensures security and correct error handling for authentication."
+      "reason": "Ensure only authorized users can log in"
+    },
+    {
+      "id": "LOGIN-003",
+      "title": "Verify login with empty fields",
+      "page": "Log In",
+      "priority": "High",
+      "type": "Negative",
+      "reason": "Ensure input validation works correctly"
     },
     {
       "id": "LOGOUT-001",
       "title": "Verify successful user logout",
       "page": "Home",
-      "priority": "High",
+      "priority": "Low",
       "type": "Smoke",
-      "reason": "Essential for managing user sessions and security."
+      "reason": "Ensure user session is properly terminated"
     },
     {
-      "id": "CONTACT-001",
-      "title": "Verify sending a contact message successfully",
-      "page": "Home (Contact Modal)",
-      "priority": "Low",
+      "id": "BROWSECAT-001",
+      "title": "Verify filtering products by 'Phones' category",
+      "page": "Home",
+      "priority": "Medium",
       "type": "Positive",
-      "reason": "Important for user communication and support."
+      "reason": "Core functionality for product discovery"
     },
     {
-      "id": "CONTACT-002",
-      "title": "Verify contact form displays validation errors for empty fields",
-      "page": "Home (Contact Modal)",
-      "priority": "Low",
-      "type": "Negative",
-      "reason": "Ensures proper form validation and user feedback."
-    },
-    {
-      "id": "ABOUTUS-001",
-      "title": "Verify 'About us' video modal opens and video plays",
-      "page": "Home (About Us Video Modal)",
-      "priority": "Low",
+      "id": "BROWSECAT-002",
+      "title": "Verify filtering products by 'Laptops' category",
+      "page": "Home",
+      "priority": "Medium",
       "type": "Positive",
-      "reason": "Informational content should be accessible and functional."
+      "reason": "Core functionality for product discovery"
+    },
+    {
+      "id": "PAGIN-001",
+      "title": "Verify navigating to the next page of products",
+      "page": "Home",
+      "priority": "Medium",
+      "type": "Positive",
+      "reason": "Ensures all products are discoverable"
+    },
+    {
+      "id": "PRODDETAIL-001",
+      "title": "Verify navigating to a product details page",
+      "page": "Product",
+      "priority": "Medium",
+      "type": "Positive",
+      "reason": "Essential for users to view product information"
     },
     {
       "id": "CART-001",
-      "title": "Verify navigation to the Cart page",
+      "title": "Verify adding a product from product details page to cart",
+      "page": "Product",
+      "priority": "High",
+      "type": "Regression",
+      "reason": "Shopping cart is a core business flow"
+    },
+    {
+      "id": "CONTACT-001",
+      "title": "Verify sending a contact message with valid data",
+      "page": "Contact",
+      "priority": "Low",
+      "type": "Positive",
+      "reason": "Important for customer support communication"
+    },
+    {
+      "id": "VIDEO-001",
+      "title": "Verify 'About us' video plays successfully",
+      "page": "About us",
+      "priority": "Low",
+      "type": "Positive",
+      "reason": "Informational content should be accessible"
+    },
+    {
+      "id": "NAV-001",
+      "title": "Verify navigating to the Cart page",
       "page": "Cart",
       "priority": "High",
       "type": "Regression",
-      "reason": "Shopping cart is a core business flow."
+      "reason": "Shopping cart is a core business flow"
     }
   ],
   "risks": [
-    "Product images lack meaningful alt text, impacting accessibility for screen reader users.",
-    "Product prices are rendered as H5 headings, which is semantically incorrect and affects document outline.",
-    "The 'About us' video player's accessibility (e.g., keyboard navigation, ARIA labels for controls) needs thorough verification.",
-    "Generic error label elements for forms (#errors, #errorl) may not provide specific or contextual error messages to users.",
-    "Product descriptions are truncated with 'text-overflow: ellipsis' without an clear option to view full text, affecting usability.",
-    "Modal dialogs (Contact, Sign Up, Log In, About Us) need full accessibility checks for keyboard trapping and focus management.",
-    "Color contrast of text elements, especially within navigation and footer, should be verified to meet WCAG standards."
+    "Images missing 'alt' attributes for accessibility (e.g., product images, favicons).",
+    "Labels in Log In form (Username, Password) have 'for' attributes that do not match input 'id' attributes, affecting accessibility.",
+    "Duplicate 'id' attributes (e.g., 'itemc' for category links, 'example-video_component_430') violating HTML standards and potentially causing script failures.",
+    "Video player elements using 'tabindex=\"-1\"' may hinder keyboard navigation for accessibility.",
+    "Semantic HTML issues: 'h2' for product name instead of 'h1' on product page, 'h4' for product prices.",
+    "Product description text truncation ('overflow: hidden') might hide information from users.",
+    "Reliance on inline 'onclick' JavaScript for core interactions without progressive enhancement.",
+    "Potential low color contrast in header navigation links against the gradient background."
   ]
 }
