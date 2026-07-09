@@ -1,8 +1,8 @@
 [
   {
-    "id": "PRODCAT-001",
+    "id": "HOME-001",
     "feature": "Home",
-    "title": "Verify products filter by category",
+    "title": "Verify product categories filter products correctly",
     "page": "Home",
     "priority": "Medium",
     "tags": [
@@ -12,9 +12,9 @@
     "steps": []
   },
   {
-    "id": "PRODPAG-001",
+    "id": "HOME-002",
     "feature": "Home",
-    "title": "Verify pagination navigates through products",
+    "title": "Verify product pagination navigates correctly",
     "page": "Home",
     "priority": "Medium",
     "tags": [
@@ -24,9 +24,9 @@
     "steps": []
   },
   {
-    "id": "PRODDET-001",
+    "id": "PROD-001",
     "feature": "Product Details",
-    "title": "Verify product details page displays correctly",
+    "title": "Verify product details page loads with correct information",
     "page": "Product Details",
     "priority": "Medium",
     "tags": [
@@ -36,26 +36,26 @@
     "steps": []
   },
   {
-    "id": "CART-001",
-    "feature": "Product Details",
-    "title": "Verify adding a product to cart successfully",
-    "page": "Product Details",
-    "priority": "High",
-    "tags": [
-      "@high",
-      "@regression"
-    ],
-    "steps": []
-  },
-  {
-    "id": "REG-001",
-    "feature": "Sign up",
+    "id": "SIGNUP-001",
+    "feature": "Sign Up",
     "title": "Verify successful user registration",
-    "page": "Sign up",
+    "page": "Sign Up",
     "priority": "High",
     "tags": [
       "@high",
       "@smoke"
+    ],
+    "steps": []
+  },
+  {
+    "id": "SIGNUP-002",
+    "feature": "Sign Up",
+    "title": "Verify registration with existing username fails",
+    "page": "Sign Up",
+    "priority": "High",
+    "tags": [
+      "@high",
+      "@negative"
     ],
     "steps": []
   },
@@ -72,6 +72,18 @@
     "steps": []
   },
   {
+    "id": "LOGIN-002",
+    "feature": "Login",
+    "title": "Verify login with invalid credentials fails",
+    "page": "Login",
+    "priority": "High",
+    "tags": [
+      "@high",
+      "@negative"
+    ],
+    "steps": []
+  },
+  {
     "id": "LOGOUT-001",
     "feature": "Home",
     "title": "Verify successful user logout",
@@ -79,15 +91,15 @@
     "priority": "High",
     "tags": [
       "@high",
-      "@positive"
+      "@smoke"
     ],
     "steps": []
   },
   {
     "id": "CONTACT-001",
-    "feature": "Contact",
-    "title": "Verify contact message can be sent",
-    "page": "Contact",
+    "feature": "Home (Contact)",
+    "title": "Verify sending a contact message successfully",
+    "page": "Home (Contact Modal)",
     "priority": "Low",
     "tags": [
       "@low",
@@ -96,14 +108,38 @@
     "steps": []
   },
   {
+    "id": "CONTACT-002",
+    "feature": "Home (Contact)",
+    "title": "Verify contact form displays validation errors for empty fields",
+    "page": "Home (Contact Modal)",
+    "priority": "Low",
+    "tags": [
+      "@low",
+      "@negative"
+    ],
+    "steps": []
+  },
+  {
     "id": "ABOUTUS-001",
-    "feature": "About us",
-    "title": "Verify About us video modal opens and video plays",
-    "page": "About us",
+    "feature": "Home (About Us Video)",
+    "title": "Verify 'About us' video modal opens and video plays",
+    "page": "Home (About Us Video Modal)",
     "priority": "Low",
     "tags": [
       "@low",
       "@positive"
+    ],
+    "steps": []
+  },
+  {
+    "id": "CART-001",
+    "feature": "Cart",
+    "title": "Verify navigation to the Cart page",
+    "page": "Cart",
+    "priority": "High",
+    "tags": [
+      "@high",
+      "@regression"
     ],
     "steps": []
   }
