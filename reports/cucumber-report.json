@@ -1,0 +1,342 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "accessibility-scan;homepage-accessibility-scan",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Homepage accessibility scan",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 772883125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user opens homepage",
+            "match": {
+              "location": "step-definitions/common.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1103472667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "accessibility scan is executed",
+            "match": {
+              "location": "step-definitions/accessibility.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 306348250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "no critical accessibility violations should exist",
+            "match": {
+              "location": "step-definitions/accessibility.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1698708
+            },
+            "embeddings": [
+              {
+                "data": "CkFjY2Vzc2liaWxpdHkgU3VtbWFyeQoKQ3JpdGljYWwgOiAxClNlcmlvdXMgOiAwCk1vZGVyYXRlIDogMwpNaW5vciA6IDAK",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "serious accessibility violations should be reported",
+            "match": {
+              "location": "step-definitions/accessibility.steps.ts:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 229374
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 43529790
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "accessibility-scan",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Accessibility Scan",
+    "tags": [],
+    "uri": "features/accessibility/homeAccessibility.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "home-page;home-page-opens-successfully",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Home page opens successfully",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 355394582
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user opens Demoblaze",
+            "match": {
+              "location": "step-definitions/home.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1482173083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "homepage should be displayed",
+            "match": {
+              "location": "step-definitions/home.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3925000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 54204167
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "home-page",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Home Page",
+    "tags": [],
+    "uri": "features/ui/home.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "product;open-first-product",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Open first product",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 359789667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user opens homepage",
+            "match": {
+              "location": "step-definitions/common.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 700165750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "user opens the first product",
+            "match": {
+              "location": "step-definitions/product.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1054843916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "product details page should be displayed",
+            "match": {
+              "location": "step-definitions/product.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 805877208
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 68492249
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "product",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Product",
+    "tags": [],
+    "uri": "features/ui/product.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "shopping-cart;user-adds-a-product-to-the-shopping-cart",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "User adds a product to the shopping cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 366325666
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user opens homepage",
+            "match": {
+              "location": "step-definitions/common.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 786119249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "user opens the first product",
+            "match": {
+              "location": "step-definitions/product.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 911149750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "user adds the product to the cart",
+            "match": {
+              "location": "step-definitions/shopping.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 845701333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "user opens the cart",
+            "match": {
+              "location": "step-definitions/shopping.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 245135624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the cart should contain products",
+            "match": {
+              "location": "step-definitions/shopping.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1318314124
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 60222874
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "shopping-cart",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Shopping Cart",
+    "tags": [],
+    "uri": "features/ui/shoppingCart.feature"
+  }
+]

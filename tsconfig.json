@@ -3,17 +3,29 @@
     "target": "ES2022",
     "module": "CommonJS",
     "moduleResolution": "Node",
+
     "strict": true,
+
     "esModuleInterop": true,
+
     "resolveJsonModule": true,
+
     "types": [
       "node",
       "@playwright/test"
     ],
+
     "skipLibCheck": true,
+
     "outDir": "dist"
   },
+
   "include": [
     "**/*.ts"
+  ],
+
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }
