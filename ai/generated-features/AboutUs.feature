@@ -11,7 +11,7 @@ Background:
 
 @low
 @positive
-Scenario: Verify 'About us' video plays successfully
+Scenario: Verify About Us video loads and plays
   When user performs the action
   Then expected result should be displayed
 

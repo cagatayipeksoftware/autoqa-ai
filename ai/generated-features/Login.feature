@@ -11,7 +11,7 @@ Background:
 
 @high
 @smoke
-Scenario: Verify successful user login
+Scenario: Verify successful login
   When user logs in with valid credentials
   Then user should be logged in successfully
 
@@ -20,10 +20,4 @@ Scenario: Verify successful user login
 Scenario: Verify login with invalid credentials
   When user logs in with invalid credentials
   Then an error message should be displayed
-
-@high
-@negative
-Scenario: Verify login with empty fields
-  When user logs in with valid credentials
-  Then user should be logged in successfully
 

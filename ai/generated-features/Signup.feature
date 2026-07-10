@@ -21,9 +21,3 @@ Scenario: Verify registration with existing username
   When user registers with valid information
   Then account should be created successfully
 
-@high
-@negative
-Scenario: Verify registration with empty fields
-  When user registers with valid information
-  Then account should be created successfully
-

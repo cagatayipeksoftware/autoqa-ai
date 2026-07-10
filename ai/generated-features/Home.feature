@@ -9,15 +9,27 @@ Feature: Home
 Background:
   Given user opens homepage
 
+@high
+@smoke
+Scenario: Verify successful logout
+  When user performs the action
+  Then expected result should be displayed
+
 @medium
-@regression
-Scenario: Verify product filtering by category (Phones)
+@positive
+Scenario: Verify product display on Home page
   When user opens a product
   Then product details should be displayed
 
 @medium
 @regression
-Scenario: Verify product pagination (Next/Previous buttons)
+Scenario: Verify category filter for 'Phones'
+  When user performs the action
+  Then expected result should be displayed
+
+@medium
+@regression
+Scenario: Verify pagination for product listings
   When user opens a product
   Then product details should be displayed
 

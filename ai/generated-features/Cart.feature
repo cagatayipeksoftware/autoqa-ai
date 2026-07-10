@@ -10,14 +10,20 @@ Background:
   Given user opens homepage
 
 @high
-@regression
-Scenario: Verify items are correctly displayed in the cart page
+@positive
+Scenario: Verify cart page loads with added products
   When user adds a product to the cart
   Then cart should contain the product
 
 @high
 @regression
-Scenario: Verify removing a product from the cart
+Scenario: Verify removing a product from cart
   When user adds a product to the cart
   Then cart should contain the product
+
+@high
+@positive
+Scenario: Verify successful checkout with valid details
+  When user performs the action
+  Then expected result should be displayed
 

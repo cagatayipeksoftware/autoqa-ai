@@ -10,14 +10,14 @@ Background:
   Given user opens homepage
 
 @medium
-@regression
-Scenario: Verify navigating to a product details page
+@positive
+Scenario: Verify product details page loads correctly
   When user opens a product
   Then product details should be displayed
 
 @high
 @regression
-Scenario: Verify adding a product to cart from product details
+Scenario: Verify adding a product to cart from product page
   When user adds a product to the cart
   Then cart should contain the product
 
