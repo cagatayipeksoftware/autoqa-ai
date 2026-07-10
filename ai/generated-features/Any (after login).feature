@@ -3,15 +3,15 @@
 # Do not edit manually.
 # ==========================================
 
-@contact-(modal)
-Feature: Contact (Modal)
+@any-(after-login)
+Feature: Any (after login)
 
 Background:
   Given user opens homepage
 
-@low
-@positive
-Scenario: Verify sending a contact message successfully
+@high
+@smoke
+Scenario: Verify successful user logout
   When user performs the action
   Then expected result should be displayed
 

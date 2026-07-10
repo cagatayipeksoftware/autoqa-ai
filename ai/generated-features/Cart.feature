@@ -11,7 +11,13 @@ Background:
 
 @high
 @regression
-Scenario: Verify navigating to the Cart page
+Scenario: Verify items are correctly displayed in the cart page
+  When user adds a product to the cart
+  Then cart should contain the product
+
+@high
+@regression
+Scenario: Verify removing a product from the cart
   When user adds a product to the cart
   Then cart should contain the product
 

@@ -15,16 +15,16 @@ export class GeminiService {
         });
     }
 
-    async discoverWebsite(snapshot:WebsiteSnapshot): Promise<WebsiteSpec> {
+    async discoverWebsite(snapshot: WebsiteSnapshot): Promise<WebsiteSpec> {
 
         const response = await this.client.models.generateContent({
             model: "gemini-2.5-flash",
             contents:
-`${discoveryPrompt}
+                `${discoveryPrompt}
 
-Website Snapshot:
+            Website Snapshot:
 
-${JSON.stringify(snapshot, null, 2)}`
+            ${JSON.stringify(snapshot, null, 2)}`
         });
 
         const text = response.text ?? "";

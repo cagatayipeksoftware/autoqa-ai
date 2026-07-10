@@ -17,7 +17,7 @@ Scenario: Verify successful user registration
 
 @high
 @negative
-Scenario: Verify registration with existing username fails
+Scenario: Verify registration with existing username
   When user registers with valid information
   Then account should be created successfully
 

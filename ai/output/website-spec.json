@@ -15,14 +15,16 @@
     "Phones (Category)",
     "Laptops (Category)",
     "Monitors (Category)",
-    "Product Item (Detail Page)",
     "Previous (Pagination)",
-    "Next (Pagination)"
+    "Next (Pagination)",
+    "Add to cart",
+    "Place Order"
   ],
   "forms": [
-    "Contact",
-    "Sign Up",
-    "Log In"
+    "Contact Form (Modal)",
+    "Sign Up Form (Modal)",
+    "Login Form (Modal)",
+    "Place Order Form (Modal)"
   ],
   "userFlows": [
     "User Registration",
@@ -32,140 +34,140 @@
     "Browse Products with Pagination",
     "View Product Details",
     "Add Product to Cart",
-    "Contact Support",
-    "Watch About Us Video",
-    "Navigate to Cart"
+    "View Shopping Cart",
+    "Remove Product from Cart",
+    "Checkout Process",
+    "Send Contact Message",
+    "Watch About Us Video"
   ],
   "testIdeas": [
     {
       "id": "REG-001",
       "title": "Verify successful user registration",
-      "page": "Sign Up",
+      "page": "Sign Up (Modal)",
       "priority": "High",
       "type": "Smoke",
-      "reason": "Authentication is a critical business flow"
+      "reason": "Core authentication functionality."
     },
     {
       "id": "REG-002",
       "title": "Verify registration with existing username",
-      "page": "Sign Up",
+      "page": "Sign Up (Modal)",
       "priority": "High",
       "type": "Negative",
-      "reason": "Prevent duplicate accounts and ensure data integrity"
-    },
-    {
-      "id": "REG-003",
-      "title": "Verify registration with empty fields",
-      "page": "Sign Up",
-      "priority": "High",
-      "type": "Negative",
-      "reason": "Ensure input validation works correctly"
+      "reason": "Important validation scenario for user accounts."
     },
     {
       "id": "LOGIN-001",
       "title": "Verify successful user login",
-      "page": "Log In",
+      "page": "Login (Modal)",
       "priority": "High",
       "type": "Smoke",
-      "reason": "Authentication is a critical business flow"
+      "reason": "Authentication is a critical business flow."
     },
     {
       "id": "LOGIN-002",
       "title": "Verify login with invalid credentials",
-      "page": "Log In",
+      "page": "Login (Modal)",
       "priority": "High",
       "type": "Negative",
-      "reason": "Ensure only authorized users can log in"
-    },
-    {
-      "id": "LOGIN-003",
-      "title": "Verify login with empty fields",
-      "page": "Log In",
-      "priority": "High",
-      "type": "Negative",
-      "reason": "Ensure input validation works correctly"
+      "reason": "Security and validation test for login."
     },
     {
       "id": "LOGOUT-001",
       "title": "Verify successful user logout",
-      "page": "Home",
-      "priority": "Low",
+      "page": "Any (after login)",
+      "priority": "High",
       "type": "Smoke",
-      "reason": "Ensure user session is properly terminated"
+      "reason": "Ensure user session termination."
     },
     {
-      "id": "BROWSECAT-001",
-      "title": "Verify filtering products by 'Phones' category",
+      "id": "BROWSE-001",
+      "title": "Verify product filtering by category (Phones)",
       "page": "Home",
       "priority": "Medium",
-      "type": "Positive",
-      "reason": "Core functionality for product discovery"
+      "type": "Regression",
+      "reason": "Core product navigation functionality."
     },
     {
-      "id": "BROWSECAT-002",
-      "title": "Verify filtering products by 'Laptops' category",
+      "id": "BROWSE-002",
+      "title": "Verify product pagination (Next/Previous buttons)",
       "page": "Home",
       "priority": "Medium",
-      "type": "Positive",
-      "reason": "Core functionality for product discovery"
+      "type": "Regression",
+      "reason": "Ensure all products are accessible and browsing works."
     },
     {
-      "id": "PAGIN-001",
-      "title": "Verify navigating to the next page of products",
-      "page": "Home",
-      "priority": "Medium",
-      "type": "Positive",
-      "reason": "Ensures all products are discoverable"
-    },
-    {
-      "id": "PRODDETAIL-001",
+      "id": "PROD-001",
       "title": "Verify navigating to a product details page",
       "page": "Product",
       "priority": "Medium",
-      "type": "Positive",
-      "reason": "Essential for users to view product information"
+      "type": "Regression",
+      "reason": "Essential for customer interaction with products."
     },
     {
       "id": "CART-001",
-      "title": "Verify adding a product from product details page to cart",
+      "title": "Verify adding a product to cart from product details",
       "page": "Product",
       "priority": "High",
       "type": "Regression",
-      "reason": "Shopping cart is a core business flow"
+      "reason": "Shopping cart is a core business flow."
     },
     {
-      "id": "CONTACT-001",
-      "title": "Verify sending a contact message with valid data",
-      "page": "Contact",
-      "priority": "Low",
-      "type": "Positive",
-      "reason": "Important for customer support communication"
-    },
-    {
-      "id": "VIDEO-001",
-      "title": "Verify 'About us' video plays successfully",
-      "page": "About us",
-      "priority": "Low",
-      "type": "Positive",
-      "reason": "Informational content should be accessible"
-    },
-    {
-      "id": "NAV-001",
-      "title": "Verify navigating to the Cart page",
+      "id": "CART-002",
+      "title": "Verify items are correctly displayed in the cart page",
       "page": "Cart",
       "priority": "High",
       "type": "Regression",
-      "reason": "Shopping cart is a core business flow"
+      "reason": "Verify cart contents accuracy and navigation."
+    },
+    {
+      "id": "CART-003",
+      "title": "Verify removing a product from the cart",
+      "page": "Cart",
+      "priority": "High",
+      "type": "Regression",
+      "reason": "Essential cart management functionality."
+    },
+    {
+      "id": "CHECKOUT-001",
+      "title": "Verify successful purchase order submission",
+      "page": "Place Order (Modal)",
+      "priority": "High",
+      "type": "Regression",
+      "reason": "Critical business transaction."
+    },
+    {
+      "id": "CHECKOUT-002",
+      "title": "Verify purchase order with incomplete information",
+      "page": "Place Order (Modal)",
+      "priority": "High",
+      "type": "Negative",
+      "reason": "Input validation is crucial for checkout."
+    },
+    {
+      "id": "CONTACT-001",
+      "title": "Verify sending a contact message successfully",
+      "page": "Contact (Modal)",
+      "priority": "Low",
+      "type": "Positive",
+      "reason": "User support channel functionality check."
+    },
+    {
+      "id": "ABOUTUS-001",
+      "title": "Verify About us video loads and plays",
+      "page": "About us (Modal)",
+      "priority": "Low",
+      "type": "Smoke",
+      "reason": "Informational content accessibility check."
     }
   ],
   "risks": [
-    "Images missing 'alt' attributes for accessibility (e.g., product images, favicons).",
-    "Labels in Log In form (Username, Password) have 'for' attributes that do not match input 'id' attributes, affecting accessibility.",
-    "Duplicate 'id' attributes (e.g., 'itemc' for category links, 'example-video_component_430') violating HTML standards and potentially causing script failures.",
-    "Video player elements using 'tabindex=\"-1\"' may hinder keyboard navigation for accessibility.",
-    "Semantic HTML issues: 'h2' for product name instead of 'h1' on product page, 'h4' for product prices.",
-    "Product description text truncation ('overflow: hidden') might hide information from users.",
-    "Reliance on inline 'onclick' JavaScript for core interactions without progressive enhancement.",
-    "Potential low color contrast in header navigation links against the gradient background."
+    "Inconsistent and missing 'alt' attributes for images (e.g., favicons, product image on Product page), reducing accessibility for screen reader users.",
+    "Potential color contrast issues on navigation links and footer text due to gradient backgrounds, which might impact readability for users with visual impairments.",
+    "Use of 'href=\"#\"' for interactive elements without proper JavaScript handling or `role='button'` which can lead to unexpected scroll behavior or accessibility issues if JavaScript fails or for keyboard users.",
+    "Modal accessibility needs explicit verification for proper focus management (tab trapping) and escape key handling to close modals.",
+    "Dynamic content loading for the product list on the Home page and items in the Cart page requires robust error handling and loading indicators for a better user experience.",
+    "The video player element on the About us modal has `tabindex='-1'`, which might prevent keyboard navigation and control for some users."
   ]
 }

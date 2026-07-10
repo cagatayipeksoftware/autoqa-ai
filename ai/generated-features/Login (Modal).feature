@@ -17,7 +17,7 @@ Scenario: Verify successful user login
 
 @high
 @negative
-Scenario: Verify login with invalid credentials fails
+Scenario: Verify login with invalid credentials
   When user logs in with invalid credentials
   Then an error message should be displayed
 

@@ -3,15 +3,21 @@
 # Do not edit manually.
 # ==========================================
 
-@contact-(modal)
-Feature: Contact (Modal)
+@place-order-(modal)
+Feature: Place Order (Modal)
 
 Background:
   Given user opens homepage
 
-@low
-@positive
-Scenario: Verify sending a contact message successfully
+@high
+@regression
+Scenario: Verify successful purchase order submission
+  When user performs the action
+  Then expected result should be displayed
+
+@high
+@negative
+Scenario: Verify purchase order with incomplete information
   When user performs the action
   Then expected result should be displayed
 

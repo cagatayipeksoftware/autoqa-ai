@@ -4,14 +4,14 @@
 # ==========================================
 
 @about-us-(modal)
-Feature: About Us (Modal)
+Feature: About us (Modal)
 
 Background:
   Given user opens homepage
 
 @low
-@positive
-Scenario: Verify About Us video can be played
+@smoke
+Scenario: Verify About us video loads and plays
   When user performs the action
   Then expected result should be displayed
 
