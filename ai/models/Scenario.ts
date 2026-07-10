@@ -14,4 +14,29 @@ export interface Scenario {
 
     steps: string[];
 
+    type: ScenarioType;
+
+    businessValue: BusinessValue;
+
+    preconditions: string[];
+
+    expectedResults: string[];
+
+    edgeCases: string[];
+
+    accessibilityChecks: string[];
+
 }
+
+export type ScenarioType =
+    | "Smoke"
+    | "Positive"
+    | "Negative"
+    | "Regression"
+    | "Accessibility";
+
+export type BusinessValue =
+    | "Critical"
+    | "High"
+    | "Medium"
+    | "Low";

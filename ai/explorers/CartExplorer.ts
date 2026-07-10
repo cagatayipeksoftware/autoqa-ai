@@ -1,88 +1,38 @@
 import { Page } from "@playwright/test";
 
 import { BaseExplorer } from "./BaseExplorer";
-import { ImageSnapshot, PageSnapshot } from "../models/PageSnapshot";
+import { PageSnapshot } from "../models/PageSnapshot";
+
+import { NavigationService } from "../../services/NavigationService";
+import { SnapshotBuilder } from "../builders/SnapshotBuilder";
 
 export class CartExplorer extends BaseExplorer {
 
+    private readonly navigation = new NavigationService();
+
+    private readonly snapshotBuilder = new SnapshotBuilder();
+
     async explore(page: Page): Promise<PageSnapshot> {
 
-        await page.locator("#cartur").click();
+        const cart = await this.navigation.findCart(page);
 
-        await page.waitForURL(url => url.pathname.endsWith("/cart.html"));
+        await page
+            .locator(`a[href="${cart.href}"]`)
+            .first()
+            .click();
 
-        const headings = this.cleanText(
-            await page.locator("h1,h2,h3,h4,h5,h6").allTextContents()
+        await page.waitForURL(/cart/i);
+
+        const snapshot = await this.snapshotBuilder.build(
+            page,
+            "Cart"
         );
-
-        const links = this.cleanText(
-            await page.locator("a").allTextContents()
-        );
-
-        const buttons = this.cleanText(
-            await page.locator("button").allTextContents()
-        );
-
-        const forms = (
-            await page
-                .locator("form")
-                .evaluateAll(forms =>
-                    forms.map(form =>
-                        form.getAttribute("id") ??
-                        form.getAttribute("name") ??
-                        "form"
-                    )
-                )
-        ).filter(Boolean);
-
-        const images = (
-            await page
-                .locator("img")
-                .evaluateAll(images =>
-                    images.map(image => ({
-                        alt: image.getAttribute("alt") ?? "",
-                        src: image.getAttribute("src") ?? ""
-                    }))
-                )
-        ).filter(image => image.src.length > 0) as ImageSnapshot[];
-
-        const snapshot: PageSnapshot = {
-
-            name: "Cart",
-
-            url: page.url(),
-
-            title: await page.title(),
-
-            html: await page.content(),
-
-            headings,
-
-            links,
-
-            buttons,
-
-            forms,
-
-            images
-
-        };
 
         await page.goBack();
 
-        await page.locator(".card").first().waitFor();
+        await page.waitForURL(/index/i);
 
         return snapshot;
-
-    }
-
-    private cleanText(values: string[]): string[] {
-
-        return [...new Set(
-            values
-                .map(value => value.trim())
-                .filter(Boolean)
-        )];
 
     }
 

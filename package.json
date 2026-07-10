@@ -4,11 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js --config config/cucumber.js",
-    "test:headed": "cucumber-js --config config/cucumber.js",
-    "test:accessibility": "cucumber-js --config config/cucumber.js",
-    "ai:discover": "tsx ai/runDiscovery.ts"
-  },
+  "test": "cucumber-js --config config/cucumber.js",
+  "test:headed": "cucumber-js --config config/cucumber.js",
+  "test:accessibility": "cucumber-js --config config/cucumber.js",
+
+  "ai:discover": "tsx ai/runDiscovery.ts",
+  "ai:generate": "tsx ai/runGenerate.ts",
+  "ai:execute": "tsx ai/runExecute.ts",
+
+  "playwright:generated": "playwright test ai/generated-tests",
+
+  "ai:pipeline": "npm run ai:discover && npm run ai:generate"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
