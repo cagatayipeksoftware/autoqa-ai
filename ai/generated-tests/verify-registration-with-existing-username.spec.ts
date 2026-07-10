@@ -5,17 +5,15 @@ test("Verify registration with existing username", async ({ page }) => {
 
   await page.getByRole("link", { name: "Sign up" }).click();
 
-  const modal = page.getByLabel("Sign up");
-  await expect(modal).toBeVisible();
+  const signUpModal = page.getByRole("dialog", { name: "Sign up" });
+  await expect(signUpModal).toBeVisible();
 
-  await modal.getByLabel("Username:").fill("existing_user_test_123");
-  await modal.getByLabel("Password:").fill("password123");
+  await signUpModal.getByLabel("Username:").fill("existinguser");
+  await signUpModal.getByLabel("Password:").fill("password123");
 
-  await page.getByRole("button", { name: "Sign up" }).click();
+  await signUpModal.getByRole("button", { name: "Sign up" }).click();
 
-  const dialogPromise = page.waitForEvent("dialog");
-  const dialog = await dialogPromise;
-
+  const dialog = await page.waitForEvent("dialog");
   expect(dialog.message()).toBe("This user already exist.");
-  await dialog.dismiss();
+  await dialog.accept();
 });

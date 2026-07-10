@@ -24,4 +24,5 @@ test("Verify successful checkout with valid details", async ({ page }) => {
 
     await expect(page.getByText("Thank you for your purchase!")).toBeVisible();
     await page.getByRole("button", { name: "OK" }).click();
+    await expect(page).toHaveURL(/.*index.html/);
 });

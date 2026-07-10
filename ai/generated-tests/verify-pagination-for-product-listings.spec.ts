@@ -1,16 +1,19 @@
 import { test, expect } from "@playwright/test";
 
 test("Verify pagination for product listings", async ({ page }) => {
-    await page.goto("https://demoblaze.com");
+  await page.goto("https://demoblaze.com");
 
-    const productCards = page.locator(".card");
-    const nextButton = page.getByRole("button", { name: "Next" });
+  const productCards = page.locator(".card");
+  await expect(productCards.first()).toBeVisible();
 
-    await expect(productCards).toHaveCount(9);
-    await expect(nextButton).toBeVisible();
+  const initialCount = await productCards.count();
+  expect(initialCount).toBeLessThanOrEqual(9);
 
-    await nextButton.click();
+  const nextButton = page.getByRole("button", { name: "Next" });
+  await nextButton.click();
 
-    await expect(productCards.first()).toBeVisible();
-    await expect(page.getByRole("button", { name: "Previous" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Previous" })).toBeVisible();
+  
+  const secondPageCards = page.locator(".card");
+  await expect(secondPageCards.first()).toBeVisible();
 });

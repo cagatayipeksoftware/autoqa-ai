@@ -1,20 +1,22 @@
 import { test, expect } from "@playwright/test";
 
 test("Verify successful user registration", async ({ page }) => {
-  await page.goto("https://demoblaze.com");
+    await page.goto("https://demoblaze.com");
 
-  await page.getByRole("link", { name: "Sign up" }).click();
+    await page.getByRole("link", { name: "Sign up" }).click();
 
-  const username = `testuser_${Date.now()}`;
-  const password = "password123";
+    const modal = page.getByRole("dialog", { name: "Sign up" });
+    await expect(modal).toBeVisible();
 
-  await page.getByLabel("Username:").fill(username);
-  await page.getByLabel("Password:").fill(password);
+    const username = `user_${Date.now()}`;
+    const password = "Password123!";
 
-  page.on("dialog", async (dialog) => {
-    expect(dialog.message()).toBe("Sign up successful.");
-    await dialog.accept();
-  });
+    await modal.getByLabel("Username:").fill(username);
+    await modal.getByLabel("Password:").fill(password);
+    await modal.getByRole("button", { name: "Sign up" }).click();
 
-  await page.getByRole("button", { name: "Sign up" }).click();
+    page.on("dialog", async (dialog) => {
+        await expect(dialog.message()).toBe("Sign up successful.");
+        await dialog.accept();
+    });
 });

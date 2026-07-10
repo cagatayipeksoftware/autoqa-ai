@@ -11,6 +11,10 @@ test("Verify cart page loads with added products", async ({ page }) => {
   await page.getByRole("link", { name: "Cart", exact: true }).click();
 
   await expect(page).toHaveURL(/.*cart/);
-  await expect(page.getByRole("heading", { name: "Products" })).toBeVisible();
-  await expect(page.getByRole("cell", { name: "Samsung galaxy s6" })).toBeVisible();
+  
+  const cartTable = page.getByRole("table");
+  await expect(cartTable).toBeVisible();
+  
+  const productRow = page.getByRole("row").filter({ hasText: "Samsung galaxy s6" });
+  await expect(productRow).toBeVisible();
 });

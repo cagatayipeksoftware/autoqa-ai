@@ -3,12 +3,13 @@ import { test, expect } from "@playwright/test";
 test("Verify category filter for 'Phones'", async ({ page }) => {
   await page.goto("https://demoblaze.com");
 
-  await page.getByRole("link", { name: "Phones" }).click();
+  const phonesLink = page.getByRole("link", { name: "Phones" });
+  await phonesLink.click();
 
-  const phoneItems = page.getByRole("link", { name: /Samsung galaxy|Nokia lumia|Iphone/i });
+  const productTitles = page.getByRole("link", { name: /Samsung galaxy|Nokia lumia|Nexus 6/i });
 
-  await expect(phoneItems.first()).toBeVisible();
+  await expect(productTitles.first()).toBeVisible();
   
-  const itemCount = await phoneItems.count();
-  expect(itemCount).toBeGreaterThan(0);
+  const count = await productTitles.count();
+  expect(count).toBeGreaterThan(0);
 });

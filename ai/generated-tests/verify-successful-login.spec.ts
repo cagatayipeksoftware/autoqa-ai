@@ -1,15 +1,18 @@
 import { test, expect } from "@playwright/test";
 
 test("Verify successful login", async ({ page }) => {
-  await page.goto("https://demoblaze.com");
+    await page.goto("https://demoblaze.com");
 
-  await page.getByRole("link", { name: "Log in" }).click();
+    await page.getByRole("link", { name: "Log in" }).click();
 
-  await page.getByLabel("Username:").fill("testuser_automation");
-  await page.getByLabel("Password:").fill("password123");
+    const modal = page.getByRole("dialog", { name: "Log in" });
+    await expect(modal).toBeVisible();
 
-  await page.getByRole("button", { name: "Log in" }).click();
+    await modal.getByLabel("Username:").fill("testuser_demo");
+    await modal.getByLabel("Password:").fill("testpassword123");
+    await modal.getByRole("button", { name: "Log in" }).click();
 
-  const welcomeMessage = page.getByRole("link", { name: "Welcome testuser_automation" });
-  await expect(welcomeMessage).toBeVisible();
+    const logoutLink = page.getByRole("link", { name: "Log out" });
+    await expect(logoutLink).toBeVisible();
+    await expect(page.getByRole("link", { name: "Welcome testuser_demo" })).toBeVisible();
 });

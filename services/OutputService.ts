@@ -10,8 +10,8 @@ export class OutputService {
 
         const outputDirectory = path.join(
             process.cwd(),
-            "ai",
-            "output"
+            "tests",
+            "generated"
         );
 
         await fs.mkdir(outputDirectory, {
@@ -71,8 +71,8 @@ export class OutputService {
 
         const outputDirectory = path.join(
             process.cwd(),
-            "ai",
-            "generated-tests"
+            "tests",
+            "generated"
         );
 
         await fs.mkdir(outputDirectory, {

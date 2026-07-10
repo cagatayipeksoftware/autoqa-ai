@@ -13,10 +13,9 @@ test("Verify sending a contact message with valid data", async ({ page }) => {
   await modal.getByLabel("Message:").fill("This is a test inquiry message.");
 
   page.on("dialog", async (dialog) => {
+    expect(dialog.message()).toBe("Thanks for the message!!");
     await dialog.accept();
   });
 
   await modal.getByRole("button", { name: "Send message" }).click();
-
-  await expect(modal).not.toBeVisible();
 });

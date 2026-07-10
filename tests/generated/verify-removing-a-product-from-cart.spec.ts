@@ -6,14 +6,14 @@ test("Verify removing a product from cart", async ({ page }) => {
   await page.getByRole("link", { name: "Samsung galaxy s6" }).click();
   await page.getByRole("link", { name: "Add to cart" }).click();
 
-  page.on("dialog", (dialog) => dialog.accept());
+  page.on("dialog", (dialog) => dialog.dismiss());
 
   await page.getByRole("link", { name: "Cart", exact: true }).click();
 
-  const productRow = page.getByRole("row").filter({ hasText: "Samsung galaxy s6" });
+  const productRow = page.getByRole("row", { name: "Samsung galaxy s6" });
   await expect(productRow).toBeVisible();
 
   await page.getByRole("link", { name: "Delete" }).click();
 
-  await expect(productRow).not.toBeVisible();
+  await expect(productRow).not.toBeAttached();
 });
